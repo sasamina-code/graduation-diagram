@@ -418,25 +418,42 @@
           プライバシーチェックは、AIへの"お願い"ではなく生成のたびに必ず動くプログラム処理。ただし「これなら公開して大丈夫」という最終判断まで自動でブロックするのは危険だと考え、<span class="font-medium text-ads-text">チェック結果を見せたうえで、最後に必ず自分の目で確認してから保存する</span>設計にした。
         </p>
       </div>
-    </div>
 
-    <!-- その他の工夫（軽め） -->
-    <div class="bg-ads-surface border border-ads-border rounded-xl p-4 mt-3">
-      <div class="text-xs font-bold text-ads-muted mb-2">ほかにも、細かく仕込んだ工夫</div>
-      <ul class="space-y-1.5">
-        <li class="flex items-start gap-2 text-xs text-ads-text">
-          <i data-lucide="chevron-right" class="w-3 h-3 text-ads-dim flex-shrink-0 mt-0.5"></i>
-          <span><span class="font-medium">AUTHOR_NOTEパターン</span> — 自動整理ラベルより、本人の実感を常に優先させる仕組み</span>
-        </li>
-        <li class="flex items-start gap-2 text-xs text-ads-text">
-          <i data-lucide="chevron-right" class="w-3 h-3 text-ads-dim flex-shrink-0 mt-0.5"></i>
-          <span><span class="font-medium">「会話の再構成」5ルール</span> — 感情の起伏を保つ、固有名詞だけを変える、視点は本人の内面に置く、文脈を残す、至らなさも正直に描く</span>
-        </li>
-        <li class="flex items-start gap-2 text-xs text-ads-text">
-          <i data-lucide="chevron-right" class="w-3 h-3 text-ads-dim flex-shrink-0 mt-0.5"></i>
-          <span><span class="font-medium">記事の「型」を2種類</span> — 旗艦記事（低頻度・起伏強め）とつれづれ（高頻度・軽め）で、量産しても単調にならない設計</span>
-        </li>
-      </ul>
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="edit-3" class="w-3.5 h-3.5 text-amber-600"></i>
+          </div>
+          <span class="text-sm font-bold text-ads-text">AUTHOR_NOTEパターン</span>
+        </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          日々のジャーナルは、自動整理ツールを通すと、実際の気持ちとズレた感情ラベルが付くことがある（例：本人の実感は「心を無にして嵐が過ぎるのを待つ」だったのに、自動ラベルは「恐怖に近い緊張感」となっていた）。AIの自動解釈をそのまま信じると、記事の感情の芯がズレてしまう。そこで、本人が「今回はこう感じた」と書き添えるメモ（AUTHOR_NOTE）を、自動ラベルより必ず優先して読み込む仕組みをプロンプトに組み込んだ。実行のたびに書き換えて使う、いわば"本人の解釈権"を確保するための工夫。
+        </p>
+      </div>
+
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="drama" class="w-3.5 h-3.5 text-rose-600"></i>
+          </div>
+          <span class="text-sm font-bold text-ads-text">「会話の再構成」5ルール</span>
+        </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          実際にあった出来事をそのままAIに書かせると、個人情報だけでなく文章の温度感まで失われてしまう。そこで5つのルールをプロンプト化した。①感情の起伏・リズムをそのまま保つ、②固有名詞や識別できる情報だけを別の言葉に置き換える、③視点（カメラ）は常に本人の内面に置く、④背景情報を補って文脈を厚くする、⑤自分自身の至らなさも正直に描く。単なる匿名化ではなく、「本人らしさ」を保ったまま安全に書き換えるための技法。
+        </p>
+      </div>
+
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-indigo-100 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-600"></i>
+          </div>
+          <span class="text-sm font-bold text-ads-text">記事の「型」を2種類</span>
+        </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          「出来事→気づき→感謝」という同じ骨格を毎回繰り返すと、記事を重ねるほど読者に構造が見え透いて飽きられてしまう。そこで記事に2つの「型」を用意した。型A（旗艦記事）は1つの出来事を通して大きな変容を描き切る、重めで低頻度の記事。型B（つれづれ）は日々の小さな出来事をそのまま書き留め、結論めいた一文を置かずに情景や台詞で「ふわっと」終える、軽めで高頻度の記事。量産しても単調にならないよう、素材選定の段階でどちらの型に向くかも判定するようにしている。
+        </p>
+      </div>
     </div>
   </div>
 
@@ -444,43 +461,44 @@
   <div>
     <div class="flex items-center gap-2 mb-4">
       <i data-lucide="bug" class="w-4 h-4 text-ads-warning"></i>
-      <span class="text-sm font-bold text-ads-text">苦戦した点 — ぶつかった壁と、抜けた道</span>
+      <span class="text-sm font-bold text-ads-text">苦戦した点 — 技術より、AIとの向き合い方だった</span>
     </div>
 
     <div class="space-y-3">
-      <div class="bg-amber-50 border border-amber-200 rounded-xl overflow-hidden">
-        <div class="px-4 py-3 border-b border-amber-200">
-          <div class="text-sm font-bold text-amber-900">「noteへ渡す」ボタンで、2つの壁</div>
-        </div>
-        <div class="p-4 space-y-3">
-          <div class="flex items-start gap-2.5">
-            <span class="text-[10px] font-black text-amber-500 mt-0.5 flex-shrink-0">壁1</span>
-            <p class="text-xs text-amber-800 leading-relaxed">
-              StreamlitのHTMLサニタイズが <code class="text-[11px] bg-white border border-amber-200 rounded px-1 py-0.5">onclick</code> 属性を削除してしまう
-              <i data-lucide="arrow-right" class="w-3 h-3 inline text-amber-500 mx-1"></i>
-              iframe経由の実装に変更して解決。
-            </p>
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-sky-600"></i>
           </div>
-          <div class="flex items-start gap-2.5">
-            <span class="text-[10px] font-black text-amber-500 mt-0.5 flex-shrink-0">壁2</span>
-            <p class="text-xs text-amber-800 leading-relaxed">
-              クリップボードコピー後の非同期タイミングで、ポップアップがブラウザにブロックされる
-              <i data-lucide="arrow-right" class="w-3 h-3 inline text-amber-500 mx-1"></i>
-              同期呼び出しに変更して解決。
-            </p>
-          </div>
+          <span class="text-sm font-bold text-ads-text">標準モデルか、上位モデルか</span>
         </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          日々の細かい作業は標準モデルで十分。でも、文章のトーンを詰める・記事のクオリティを検証するといった判断が難しい局面では、より高性能なモデルへの切り替えが必要になる。実際、記事生成に使うモデルはOpus・Fable5・Sonnet5の3つを同じ素材で4回チューニング・比較して選んだ（最終的にFable5を採用）。「今はどっちを使うべきか」を都度判断すること自体が、思っていたより悩ましい作業だった。
+        </p>
       </div>
 
-      <div class="bg-amber-50 border border-amber-200 rounded-xl overflow-hidden">
-        <div class="px-4 py-3 border-b border-amber-200">
-          <div class="text-sm font-bold text-amber-900">正規表現バグで、本文が消えた事故</div>
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-violet-100 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="git-branch" class="w-3.5 h-3.5 text-violet-600"></i>
+          </div>
+          <span class="text-sm font-bold text-ads-text">Claude CodeとCowork、どちらで進めるか</span>
         </div>
-        <div class="p-4">
-          <p class="text-xs text-amber-800 leading-relaxed">
-            タイトル選択機能の実装中、<code class="text-[11px] bg-white border border-amber-200 rounded px-1 py-0.5">re.DOTALL</code> の誤用に気づかないまま保存すると、本文が丸ごと消えるバグを発見。実データ1件が実際に壊れていたが、会話ログから内容を復元し、原因を直して事なきを得た。
-          </p>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          当初はコーディングツール（Claude Code）だけで完結させるつもりだった。でも実際に進めるうちに、方向性を決めたり文章のトーンを判断したりする「考える」作業と、コードを書く「手を動かす」作業を同じ場所でやると効率が悪いことに気づいた。途中から、Claude Codeとチャット（Cowork）の役割分担を言語化して整理することになった。最初から正解が分かっていたわけではなく、実際に手を動かしながら見つけていった。
+        </p>
+      </div>
+
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-teal-100 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="help-circle" class="w-3.5 h-3.5 text-teal-600"></i>
+          </div>
+          <span class="text-sm font-bold text-ads-text">AIエージェントの動き、理解するまでの時間</span>
         </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          AIが作業中にタスクリストを表示したり、選択肢を提示してきたりする場面で、最初は「これは何のため？」「自分は何をすればいい？」が分からず、都度聞きながら理解していく必要があった。AIと一緒に作る、ということ自体に慣れるための時間が、地味だけど確かに必要だった。
+        </p>
       </div>
     </div>
   </div>
