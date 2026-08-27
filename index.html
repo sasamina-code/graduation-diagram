@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta property="og:title" content="言葉の工房 — 卒業制作 図解">
+  <meta property="og:description" content="子育ての一コマをnoteの記事に変えるツール「言葉の工房」。作ったもの・解決する課題・作った理由・工夫と苦戦をまとめた卒業制作の図解です。">
+  <meta property="og:type" content="article">
+  <title>言葉の工房 — 卒業制作 図解</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><rect x='8' y='8' width='84' height='84' rx='14' fill='none' stroke='%233B82F6' stroke-width='4'/><circle cx='32' cy='40' r='10' fill='%233B82F6' opacity='0.8'/><circle cx='68' cy='40' r='10' fill='%2360A5FA' opacity='0.8'/><rect x='25' y='62' width='50' height='6' rx='3' fill='%2394A3B8' opacity='0.6'/><rect x='30' y='74' width='40' height='6' rx='3' fill='%2394A3B8' opacity='0.3'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ads: {
+              bg: '#FFFFFF',
+              surface: '#F8FAFC',
+              hover: '#F1F5F9',
+              border: '#E2E8F0',
+              accent: '#3B82F6',
+              'accent-light': '#2563EB',
+              text: '#1E293B',
+              muted: '#64748B',
+              dim: '#94A3B8',
+              positive: '#10B981',
+              negative: '#EF4444',
+              warning: '#F59E0B',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', '"Yu Gothic UI"', '"Meiryo"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { border-top: none !important; }
+      .rounded-xl { break-inside: avoid; }
+      .md\:flex-row { flex-direction: row !important; }
+      .md\:hidden { display: none !important; }
+      .hidden.md\:block { display: block !important; }
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+      .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+      .md\:mb-20 { margin-bottom: 5rem !important; }
+      .md\:py-16 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+      .bg-clip-text.text-transparent {
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+        color: #2563EB !important;
+        -webkit-text-fill-color: #2563EB !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-ads-bg text-slate-600 antialiased leading-relaxed border-t-4 border-ads-accent">
+  <div class="no-print max-w-3xl mx-auto px-5 pt-2 flex justify-end">
+    <button onclick="window.print()" class="flex items-center gap-1.5 text-xs text-ads-dim hover:text-ads-accent transition-colors cursor-pointer">
+      <i data-lucide="download" class="w-3.5 h-3.5"></i>
+      PDF
+    </button>
+  </div>
+  <main class="max-w-3xl mx-auto px-5 py-10 md:py-16">
+<!-- CONTENT_START -->
+
+<!-- ヒーロー -->
+<section class="mb-14 md:mb-20">
+  <div class="inline-flex items-center gap-2 bg-ads-surface border border-ads-border rounded-full px-3 py-1 mb-5">
+    <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-ads-accent"></i>
+    <span class="text-xs font-medium text-ads-muted">卒業制作・AIツール開発</span>
+  </div>
+  <h1 class="text-3xl md:text-4xl font-black text-ads-text mb-3 leading-tight">
+    言葉の工房
+  </h1>
+  <p class="text-base md:text-lg text-ads-muted mb-8 leading-relaxed">
+    子育ての一コマを、noteの記事に変えるツール。<br class="hidden md:block">
+    書けない理由を、ひとつずつAIに引き受けてもらう。
+  </p>
+
+  <!-- 一枚絵サマリー: 4要素の地図 -->
+  <div class="bg-ads-surface border border-ads-border rounded-2xl p-5 md:p-6 mb-4">
+    <div class="text-sm font-bold text-ads-text mb-4">この図解の中身</div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <a href="#what" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
+        <i data-lucide="hammer" class="w-4 h-4 text-ads-accent mb-2"></i>
+        <div class="text-xs font-bold text-ads-text leading-snug">作ったもの</div>
+      </a>
+      <a href="#why" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
+        <i data-lucide="alert-circle" class="w-4 h-4 text-ads-accent mb-2"></i>
+        <div class="text-xs font-bold text-ads-text leading-snug">解決する<br>面倒・課題</div>
+      </a>
+      <a href="#motivation" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
+        <i data-lucide="lightbulb" class="w-4 h-4 text-ads-accent mb-2"></i>
+        <div class="text-xs font-bold text-ads-text leading-snug">作りたいと<br>思った理由</div>
+      </a>
+      <a href="#craft" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
+        <i data-lucide="wrench" class="w-4 h-4 text-ads-accent mb-2"></i>
+        <div class="text-xs font-bold text-ads-text leading-snug">工夫した点・<br>苦戦した点</div>
+      </a>
+    </div>
+  </div>
+
+  <p class="text-sm text-ads-muted">ここから、ひとつずつ見ていきます。</p>
+</section>
+
+<!-- 1. 作ったもの -->
+<section id="what" class="mb-14 md:mb-20 scroll-mt-6">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-9 h-9 rounded-full bg-ads-accent flex items-center justify-center flex-shrink-0">
+      <i data-lucide="hammer" class="w-4.5 h-4.5 text-white"></i>
+    </div>
+    <div>
+      <div class="text-xs font-bold text-ads-accent">1</div>
+      <h2 class="text-xl font-bold text-ads-text leading-tight">作ったもの</h2>
+    </div>
+  </div>
+
+  <p class="text-sm text-ads-text mb-1 leading-relaxed">
+    <span class="font-bold">「言葉の工房」</span>。Streamlit と Anthropic API で作った、子育ての出来事をnote記事に変えるツールです。
+  </p>
+  <p class="text-sm text-ads-muted mb-6 leading-relaxed">
+    生の記録を貼るところから、noteに渡すところまで、6つのステップでつながっています。
+  </p>
+
+  <!-- 6ステップフロー -->
+  <div class="bg-ads-surface border border-ads-border rounded-2xl p-4 md:p-5 mb-8">
+    <div class="grid grid-cols-3 gap-2.5 md:gap-3">
+      <!-- Step 1 -->
+      <div class="bg-white border border-ads-border rounded-xl p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">1</div>
+        <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center mb-2">
+          <i data-lucide="pencil-line" class="w-4 h-4 text-blue-600"></i>
+        </div>
+        <div class="text-xs font-bold text-ads-text leading-snug">入力</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">生ジャーナルを貼る</div>
+      </div>
+      <!-- Step 2 -->
+      <div class="bg-white border border-ads-border rounded-xl p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">2</div>
+        <div class="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center mb-2">
+          <i data-lucide="list-checks" class="w-4 h-4 text-sky-600"></i>
+        </div>
+        <div class="text-xs font-bold text-ads-text leading-snug">ネタ候補選定</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">AIがスコア付きで提案</div>
+      </div>
+      <!-- Step 3 -->
+      <div class="bg-white border border-ads-border rounded-xl p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">3</div>
+        <div class="w-8 h-8 rounded-lg bg-indigo-100 flex items-center justify-center mb-2">
+          <i data-lucide="file-text" class="w-4 h-4 text-indigo-600"></i>
+        </div>
+        <div class="text-xs font-bold text-ads-text leading-snug">記事生成</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">シーン＋タイトル案＋本文</div>
+      </div>
+      <!-- Step 4 -->
+      <div class="bg-white border border-ads-border rounded-xl p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">4</div>
+        <div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center mb-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+        </div>
+        <div class="text-xs font-bold text-ads-text leading-snug">確認・修正</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">プライバシーチェック</div>
+      </div>
+      <!-- Step 5 -->
+      <div class="bg-white border border-ads-border rounded-xl p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">5</div>
+        <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center mb-2">
+          <i data-lucide="layout-grid" class="w-4 h-4 text-amber-600"></i>
+        </div>
+        <div class="text-xs font-bold text-ads-text leading-snug">アーカイブ</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">サムネイル付き一覧</div>
+      </div>
+      <!-- Step 6 -->
+      <div class="bg-white border border-ads-border rounded-xl p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">6</div>
+        <div class="w-8 h-8 rounded-lg bg-rose-100 flex items-center justify-center mb-2">
+          <i data-lucide="send" class="w-4 h-4 text-rose-600"></i>
+        </div>
+        <div class="text-xs font-bold text-ads-text leading-snug">note.comへ</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">半自動でコピー＋起動</div>
+      </div>
+    </div>
+    <p class="text-xs text-ads-dim mt-3 flex items-center gap-1.5">
+      <i data-lucide="info" class="w-3 h-3 flex-shrink-0"></i>
+      公開ボタンを押す最後の一手は、必ず本人の操作。ツールが用意するのはそこまで。
+    </p>
+  </div>
+
+  <!-- できあがった記事のイメージ -->
+  <div class="mb-8">
+    <div class="text-sm font-bold text-ads-text mb-3">実際にできた記事のイメージ</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
+        <img src="thumbnail_kitchen_v3_mincho.jpg" alt="生成された記事のサムネイル例1" class="w-full h-auto block">
+        <div class="px-3 py-2 text-xs text-ads-muted">アーカイブに並ぶ記事サムネイルの一例</div>
+      </div>
+      <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
+        <img src="thumbnail_test_recovery.jpg" alt="生成された記事のサムネイル例2" class="w-full h-auto block">
+        <div class="px-3 py-2 text-xs text-ads-muted">同じ工房から生まれた、別の記事の一例</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- デモ動画プレースホルダー -->
+  <div class="bg-ads-surface border border-dashed border-ads-border rounded-xl p-6 flex flex-col items-center justify-center text-center">
+    <i data-lucide="video" class="w-6 h-6 text-ads-dim mb-2"></i>
+    <div class="text-sm font-bold text-ads-muted">デモ動画 準備中</div>
+    <div class="text-xs text-ads-dim mt-1">実際に動かしている画面は、収録でき次第ここに追加します</div>
+  </div>
+</section>
+
+<!-- 2. 解決する面倒・課題 -->
+<section id="why" class="mb-14 md:mb-20 scroll-mt-6">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-9 h-9 rounded-full bg-ads-accent flex items-center justify-center flex-shrink-0">
+      <i data-lucide="alert-circle" class="w-4.5 h-4.5 text-white"></i>
+    </div>
+    <div>
+      <div class="text-xs font-bold text-ads-accent">2</div>
+      <h2 class="text-xl font-bold text-ads-text leading-tight">解決する面倒・課題</h2>
+    </div>
+  </div>
+
+  <p class="text-sm text-ads-text mb-5 leading-relaxed">
+    発達に特性のある子育てをしていると、記事にできそうな出来事は毎日起きる。<br>
+    それでも書けないのには、2つの障壁がある。
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-5">
+    <div class="bg-white border border-ads-border rounded-xl p-4">
+      <div class="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center mb-3">
+        <i data-lucide="battery-low" class="w-4.5 h-4.5 text-orange-600"></i>
+      </div>
+      <div class="text-base font-bold text-ads-text mb-1.5 leading-snug">対応で、書く手が止まる</div>
+      <p class="text-xs text-ads-muted leading-relaxed">
+        出来事は起きるのに、その場の対応で精神的・時間的な余裕がない。書こうと思ったときには、もう別の出来事が上書きされている。
+      </p>
+    </div>
+    <div class="bg-white border border-ads-border rounded-xl p-4">
+      <div class="w-9 h-9 rounded-lg bg-rose-100 flex items-center justify-center mb-3">
+        <i data-lucide="shield-alert" class="w-4.5 h-4.5 text-rose-600"></i>
+      </div>
+      <div class="text-base font-bold text-ads-text mb-1.5 leading-snug">迷いで、下書きのまま止まる</div>
+      <p class="text-xs text-ads-muted leading-relaxed">
+        書こうとしても、「これは個人情報になるのでは」「表現がきつくなりすぎないか」という迷いが手を止める。
+      </p>
+    </div>
+  </div>
+
+  <div class="bg-ads-surface border border-ads-border rounded-xl p-4 flex items-start gap-3">
+    <i data-lucide="target" class="w-5 h-5 text-ads-accent flex-shrink-0 mt-0.5"></i>
+    <p class="text-sm text-ads-text font-medium leading-relaxed">
+      この2つの障壁を、技術で軽くすることが目的。
+    </p>
+  </div>
+</section>
+
+<!-- 3. 作りたいと思った理由 -->
+<section id="motivation" class="mb-14 md:mb-20 scroll-mt-6">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-9 h-9 rounded-full bg-ads-accent flex items-center justify-center flex-shrink-0">
+      <i data-lucide="lightbulb" class="w-4.5 h-4.5 text-white"></i>
+    </div>
+    <div>
+      <div class="text-xs font-bold text-ads-accent">3</div>
+      <h2 class="text-xl font-bold text-ads-text leading-tight">作りたいと思った理由</h2>
+    </div>
+  </div>
+
+  <div class="bg-ads-surface border border-ads-border rounded-2xl p-5 md:p-6">
+    <div class="flex items-start gap-3 mb-4">
+      <i data-lucide="quote" class="w-5 h-5 text-ads-dim flex-shrink-0 mt-1"></i>
+      <p class="text-sm text-ads-text leading-relaxed">
+        きっかけは、専門家のレポートをAIに"通訳"してもらった経験。読んだ瞬間、頭の中がすっと静かになった。
+      </p>
+    </div>
+
+    <div class="flex items-center gap-2 my-5">
+      <div class="flex-1 bg-white border border-ads-border rounded-lg px-3 py-2.5 text-center">
+        <i data-lucide="file-text" class="w-4 h-4 text-ads-muted mx-auto mb-1"></i>
+        <div class="text-xs text-ads-muted">専門家のレポート</div>
+      </div>
+      <i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim flex-shrink-0"></i>
+      <div class="flex-1 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2.5 text-center">
+        <i data-lucide="sparkles" class="w-4 h-4 text-blue-500 mx-auto mb-1"></i>
+        <div class="text-xs text-blue-800 font-medium">AIの"通訳"</div>
+      </div>
+      <i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim flex-shrink-0"></i>
+      <div class="flex-1 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2.5 text-center">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mx-auto mb-1"></i>
+        <div class="text-xs text-emerald-800 font-medium">頭が静かに</div>
+      </div>
+    </div>
+
+    <p class="text-sm text-ads-text leading-relaxed font-medium">
+      AIが情報整理と感情の言語化を助けてくれるなら、日々の出来事を記事に変える作業も、同じように支援できるはず。そう思ったのが着想でした。
+    </p>
+  </div>
+</section>
+
+<!-- 4. 工夫した点・苦戦した点 -->
+<section id="craft" class="scroll-mt-6">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-9 h-9 rounded-full bg-ads-accent flex items-center justify-center flex-shrink-0">
+      <i data-lucide="wrench" class="w-4.5 h-4.5 text-white"></i>
+    </div>
+    <div>
+      <div class="text-xs font-bold text-ads-accent">4</div>
+      <h2 class="text-xl font-bold text-ads-text leading-tight">工夫した点・苦戦した点</h2>
+    </div>
+  </div>
+
+  <!-- 工夫した点 -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-4">
+      <i data-lucide="sparkles" class="w-4 h-4 text-ads-accent"></i>
+      <span class="text-sm font-bold text-ads-text">工夫した点 — AIスクールの考え方をどう使ったか</span>
+    </div>
+
+    <div class="space-y-3">
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-blue-600"></i>
+            </div>
+            <span class="text-sm font-bold text-ads-text">模範解答（ゴールデンサンプル）方式</span>
+          </div>
+          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第2回 Rule8</span>
+        </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          デモ記事v1の冒頭を <code class="text-[11px] bg-ads-surface border border-ads-border rounded px-1 py-0.5 text-ads-text">STYLE_REFERENCE</code> としてプロンプトに埋め込んだ。抽象的な指示ではなく「理想の1例」を見せることで、AIの出力精度を上げた。
+        </p>
+      </div>
+
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="user-check" class="w-3.5 h-3.5 text-purple-600"></i>
+            </div>
+            <span class="text-sm font-bold text-ads-text">ヒューマンインザループの設計</span>
+          </div>
+          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第12回</span>
+        </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          AIが速くしてくれるのは、候補出し・下書き作りまで。<span class="font-medium text-ads-text">何を記事にするか・どのタイトルにするか・どのサムネイルにするか・note.comの公開ボタンを押すか</span>——判断と最後の一手は、すべて意図的に人間の手元に残した。ここが「AIの力だけど、わたしらしさが宿る場所」。
+        </p>
+      </div>
+
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center justify-between gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+            </div>
+            <span class="text-sm font-bold text-ads-text">機械チェック＋あえて自動ブロックしない判断</span>
+          </div>
+          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第3・8・12回</span>
+        </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          プライバシーチェックは、AIへの"お願い"ではなく生成のたびに必ず動くプログラム処理。ただし、個人情報のリスクは機械だけでは拾いきれないと判断し、<span class="font-medium text-ads-text">合否を自動でブロックせず、結果を表示したうえで最終確認は必ず人間の目視にする</span>設計にした。
+        </p>
+      </div>
+    </div>
+
+    <!-- その他の工夫（軽め） -->
+    <div class="bg-ads-surface border border-ads-border rounded-xl p-4 mt-3">
+      <div class="text-xs font-bold text-ads-muted mb-2">ほかにも、細かく仕込んだ工夫</div>
+      <ul class="space-y-1.5">
+        <li class="flex items-start gap-2 text-xs text-ads-text">
+          <i data-lucide="chevron-right" class="w-3 h-3 text-ads-dim flex-shrink-0 mt-0.5"></i>
+          <span><span class="font-medium">AUTHOR_NOTEパターン</span> — 自動整理ラベルより、本人の実感を常に優先させる仕組み</span>
+        </li>
+        <li class="flex items-start gap-2 text-xs text-ads-text">
+          <i data-lucide="chevron-right" class="w-3 h-3 text-ads-dim flex-shrink-0 mt-0.5"></i>
+          <span><span class="font-medium">「会話の再構成」5ルール</span> — 感情の起伏を保つ、固有名詞だけを変える、視点は本人の内面に置く、文脈を残す、至らなさも正直に描く</span>
+        </li>
+        <li class="flex items-start gap-2 text-xs text-ads-text">
+          <i data-lucide="chevron-right" class="w-3 h-3 text-ads-dim flex-shrink-0 mt-0.5"></i>
+          <span><span class="font-medium">記事の「型」を2種類</span> — 旗艦記事（低頻度・起伏強め）とつれづれ（高頻度・軽め）で、量産しても単調にならない設計</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 苦戦した点 -->
+  <div>
+    <div class="flex items-center gap-2 mb-4">
+      <i data-lucide="bug" class="w-4 h-4 text-ads-warning"></i>
+      <span class="text-sm font-bold text-ads-text">苦戦した点 — ぶつかった壁と、抜けた道</span>
+    </div>
+
+    <div class="space-y-3">
+      <div class="bg-amber-50 border border-amber-200 rounded-xl overflow-hidden">
+        <div class="px-4 py-3 border-b border-amber-200">
+          <div class="text-sm font-bold text-amber-900">「noteへ渡す」ボタンで、2つの壁</div>
+        </div>
+        <div class="p-4 space-y-3">
+          <div class="flex items-start gap-2.5">
+            <span class="text-[10px] font-black text-amber-500 mt-0.5 flex-shrink-0">壁1</span>
+            <p class="text-xs text-amber-800 leading-relaxed">
+              StreamlitのHTMLサニタイズが <code class="text-[11px] bg-white border border-amber-200 rounded px-1 py-0.5">onclick</code> 属性を削除してしまう
+              <i data-lucide="arrow-right" class="w-3 h-3 inline text-amber-500 mx-1"></i>
+              iframe経由の実装に変更して解決。
+            </p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <span class="text-[10px] font-black text-amber-500 mt-0.5 flex-shrink-0">壁2</span>
+            <p class="text-xs text-amber-800 leading-relaxed">
+              クリップボードコピー後の非同期タイミングで、ポップアップがブラウザにブロックされる
+              <i data-lucide="arrow-right" class="w-3 h-3 inline text-amber-500 mx-1"></i>
+              同期呼び出しに変更して解決。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded-xl overflow-hidden">
+        <div class="px-4 py-3 border-b border-amber-200">
+          <div class="text-sm font-bold text-amber-900">正規表現バグで、本文が消えた事故</div>
+        </div>
+        <div class="p-4">
+          <p class="text-xs text-amber-800 leading-relaxed">
+            タイトル選択機能の実装中、<code class="text-[11px] bg-white border border-amber-200 rounded px-1 py-0.5">re.DOTALL</code> の誤用に気づかないまま保存すると、本文が丸ごと消えるバグを発見。実データ1件が実際に壊れていたが、会話ログから内容を復元し、原因を直して事なきを得た。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT_END -->
+  </main>
+  <footer class="max-w-3xl mx-auto px-5 pb-10 pt-6 border-t border-ads-border/30">
+    <p class="text-xs text-ads-dim text-center">AI-Driven School の図解ツールで作成</p>
+  </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
