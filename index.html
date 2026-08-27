@@ -125,10 +125,13 @@
   </div>
 
   <p class="text-sm text-ads-text mb-1 leading-relaxed">
-    <span class="font-bold">「言葉の工房」</span>。Streamlit と Anthropic API で作った、子育ての出来事をnote記事に変えるツールです。
+    <span class="font-bold">「言葉の工房」</span>。子育ての出来事を、noteの記事に変えるツールです。
+  </p>
+  <p class="text-sm text-ads-muted mb-1 leading-relaxed">
+    裏側では、画面を作る仕組み「Streamlit」と、文章を書くAI「Anthropic API（Claude）」が動いています。
   </p>
   <p class="text-sm text-ads-muted mb-6 leading-relaxed">
-    生の記録を貼るところから、noteに渡すところまで、6つのステップでつながっています。
+    その日にあったことをそのまま書いたメモ（ジャーナル）を貼るところから、noteに渡すところまで、6つのステップでつながっています。
   </p>
 
   <!-- 6ステップフロー -->
@@ -339,6 +342,16 @@
       このAIの"通訳"の力を、家族向けのレポートだけでなく、もっと開かれた場所（note）での発信にも生かせるはず。そう思ったのが「言葉の工房」の出発点でした。
     </p>
   </div>
+
+  <!-- 根底にある想い -->
+  <div class="mt-5 border-l-4 border-ads-accent bg-ads-surface rounded-r-xl p-5 md:p-6">
+    <p class="text-sm text-ads-text leading-relaxed mb-3">
+      子どもの成長を一緒に見守りながら、専門家の視点をリアルタイムに取り入れる。その積み重ねが、親自身の気づきと成長にもつながっていく。身近な人との関係を丁寧に育てることが、社会への貢献の出発点になると信じている。
+    </p>
+    <p class="text-sm text-ads-text leading-relaxed font-medium">
+      このツールが、その小さなきっかけになれば——同じように頑張る家族の、ひとつの道しるべになれば、こんなに嬉しいことはない。
+    </p>
+  </div>
 </section>
 
 <!-- 4. 工夫した点・苦戦した点 -->
@@ -357,7 +370,7 @@
   <div class="mb-8">
     <div class="flex items-center gap-2 mb-4">
       <i data-lucide="sparkles" class="w-4 h-4 text-ads-accent"></i>
-      <span class="text-sm font-bold text-ads-text">工夫した点 — AIスクールの考え方をどう使ったか</span>
+      <span class="text-sm font-bold text-ads-text">工夫した点 — スクール講義の考え方をどう使ったか</span>
     </div>
 
     <div class="space-y-3">
@@ -372,7 +385,7 @@
           <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第2回 Rule8</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
-          デモ記事v1の冒頭を <code class="text-[11px] bg-ads-surface border border-ads-border rounded px-1 py-0.5 text-ads-text">STYLE_REFERENCE</code> としてプロンプトに埋め込んだ。抽象的な指示ではなく「理想の1例」を見せることで、AIの出力精度を上げた。
+          AIに文章を書かせるとき、指示を細かく重ねるより、「お手本になる記事」を1本まるごと見せる方が、ずっと精度が上がる。実際に高評価だった記事の冒頭を、生成のたびにAIへのお手本として渡す仕組みにした（コード上は<code class="text-[11px] bg-ads-surface border border-ads-border rounded px-1 py-0.5 text-ads-text">STYLE_REFERENCE</code>という名前で管理）。
         </p>
       </div>
 
@@ -397,12 +410,12 @@
             <div class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
               <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
             </div>
-            <span class="text-sm font-bold text-ads-text">機械チェック＋あえて自動ブロックしない判断</span>
+            <span class="text-sm font-bold text-ads-text">自動チェックはするけど、最後は人の目で確認</span>
           </div>
           <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第3・8・12回</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
-          プライバシーチェックは、AIへの"お願い"ではなく生成のたびに必ず動くプログラム処理。ただし、個人情報のリスクは機械だけでは拾いきれないと判断し、<span class="font-medium text-ads-text">合否を自動でブロックせず、結果を表示したうえで最終確認は必ず人間の目視にする</span>設計にした。
+          プライバシーチェックは、AIへの"お願い"ではなく生成のたびに必ず動くプログラム処理。ただし「これなら公開して大丈夫」という最終判断まで自動でブロックするのは危険だと考え、<span class="font-medium text-ads-text">チェック結果を見せたうえで、最後に必ず自分の目で確認してから保存する</span>設計にした。
         </p>
       </div>
     </div>
