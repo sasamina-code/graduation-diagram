@@ -12,7 +12,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FFFFFF'/><rect x='8' y='8' width='84' height='84' rx='14' fill='none' stroke='%233B82F6' stroke-width='4'/><circle cx='32' cy='40' r='10' fill='%233B82F6' opacity='0.8'/><circle cx='68' cy='40' r='10' fill='%2360A5FA' opacity='0.8'/><rect x='25' y='62' width='50' height='6' rx='3' fill='%2394A3B8' opacity='0.6'/><rect x='30' y='74' width='40' height='6' rx='3' fill='%2394A3B8' opacity='0.3'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,22 +20,23 @@
         extend: {
           colors: {
             ads: {
-              bg: '#FFFFFF',
-              surface: '#F8FAFC',
-              hover: '#F1F5F9',
-              border: '#E2E8F0',
-              accent: '#3B82F6',
-              'accent-light': '#2563EB',
-              text: '#1E293B',
-              muted: '#64748B',
-              dim: '#94A3B8',
+              bg: '#FAF9F6',
+              surface: '#F3F1EB',
+              hover: '#EAEDF2',
+              border: '#E6E3DC',
+              accent: '#47597A',
+              'accent-light': '#394762',
+              text: '#2C2A26',
+              muted: '#6E6C66',
+              dim: '#8A8780',
               positive: '#10B981',
-              negative: '#EF4444',
-              warning: '#F59E0B',
+              negative: '#B15E3B',
+              warning: '#B15E3B',
             }
           },
           fontFamily: {
-            sans: ['"Noto Sans JP"', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', '"Yu Gothic UI"', '"Meiryo"', 'sans-serif'],
+            serif: ['"Shippori Mincho"', '"Hiragino Mincho ProN"', '"Yu Mincho"', 'serif'],
+            sans: ['"Zen Kaku Gothic New"', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', '"Yu Gothic UI"', '"Meiryo"', 'sans-serif'],
           }
         }
       }
@@ -62,9 +63,9 @@
     }
   </style>
 </head>
-<body class="bg-ads-bg text-slate-600 antialiased leading-relaxed border-t-4 border-ads-accent">
+<body class="bg-ads-bg text-ads-muted font-serif antialiased leading-relaxed border-t-4 border-ads-accent">
   <div class="no-print max-w-3xl mx-auto px-5 pt-2 flex justify-end">
-    <button onclick="window.print()" class="flex items-center gap-1.5 text-xs text-ads-dim hover:text-ads-accent transition-colors cursor-pointer">
+    <button onclick="window.print()" class="flex items-center gap-1.5 text-xs text-ads-dim hover:text-ads-accent transition-colors cursor-pointer font-sans">
       <i data-lucide="download" class="w-3.5 h-3.5"></i>
       PDF
     </button>
@@ -73,12 +74,13 @@
 <!-- CONTENT_START -->
 
 <!-- ヒーロー -->
-<section class="mb-14 md:mb-20">
+<section class="mb-14 md:mb-20 -mx-5 px-5 pt-8 pb-2 rounded-3xl bg-gradient-to-br from-[#FAF9F6] via-[#EEF1F5] to-[#F7E9E1]">
   <div class="inline-flex items-center gap-2 bg-ads-surface border border-ads-border rounded-full px-3 py-1 mb-5">
     <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-ads-accent"></i>
-    <span class="text-xs font-medium text-ads-muted">卒業制作・AIツール開発</span>
+    <span class="text-xs font-medium text-ads-muted font-sans">卒業制作・AIツール開発</span>
   </div>
-  <h1 class="text-3xl md:text-4xl font-black text-ads-text mb-3 leading-tight">
+  <h1 class="text-3xl md:text-4xl font-black text-ads-text mb-3 leading-tight flex items-center gap-2.5">
+    <i data-lucide="sparkles" class="w-6 h-6 md:w-7 md:h-7 text-ads-accent flex-shrink-0"></i>
     言葉の工房
   </h1>
   <p class="text-base md:text-lg text-ads-muted mb-8 leading-relaxed">
@@ -88,28 +90,28 @@
 
   <!-- 一枚絵サマリー: 4要素の地図 -->
   <div class="bg-ads-surface border border-ads-border rounded-2xl p-5 md:p-6 mb-4">
-    <div class="text-sm font-bold text-ads-text mb-4">この図解の中身</div>
+    <div class="text-sm font-bold text-ads-text mb-4 font-sans">この図解の中身</div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
       <a href="#what" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
         <i data-lucide="hammer" class="w-4 h-4 text-ads-accent mb-2"></i>
-        <div class="text-xs font-bold text-ads-text leading-snug">作ったもの</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">作ったもの</div>
       </a>
       <a href="#why" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
         <i data-lucide="alert-circle" class="w-4 h-4 text-ads-accent mb-2"></i>
-        <div class="text-xs font-bold text-ads-text leading-snug">解決する<br>面倒・課題</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">解決する<br>面倒・課題</div>
       </a>
       <a href="#motivation" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
         <i data-lucide="lightbulb" class="w-4 h-4 text-ads-accent mb-2"></i>
-        <div class="text-xs font-bold text-ads-text leading-snug">作りたいと<br>思った理由</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">作りたいと<br>思った理由</div>
       </a>
       <a href="#craft" class="bg-white border border-ads-border rounded-xl p-3.5 hover:border-ads-accent transition-colors">
         <i data-lucide="wrench" class="w-4 h-4 text-ads-accent mb-2"></i>
-        <div class="text-xs font-bold text-ads-text leading-snug">工夫した点・<br>苦戦した点</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">工夫した点・<br>苦戦した点</div>
       </a>
     </div>
   </div>
 
-  <p class="text-sm text-ads-muted">ここから、ひとつずつ見ていきます。</p>
+  <p class="text-sm text-ads-muted font-sans">ここから、ひとつずつ見ていきます。</p>
 </section>
 
 <!-- 1. 作ったもの -->
@@ -119,7 +121,7 @@
       <i data-lucide="hammer" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent">1</div>
+      <div class="text-xs font-bold text-ads-accent font-sans">1</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">作ったもの</h2>
     </div>
   </div>
@@ -139,60 +141,60 @@
     <div class="grid grid-cols-3 gap-2.5 md:gap-3">
       <!-- Step 1 -->
       <div class="bg-white border border-ads-border rounded-xl p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">1</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim font-sans">1</div>
         <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center mb-2">
           <i data-lucide="pencil-line" class="w-4 h-4 text-blue-600"></i>
         </div>
-        <div class="text-xs font-bold text-ads-text leading-snug">入力</div>
-        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">生ジャーナルを貼る</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">入力</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5 font-sans">生ジャーナルを貼る</div>
       </div>
       <!-- Step 2 -->
       <div class="bg-white border border-ads-border rounded-xl p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">2</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim font-sans">2</div>
         <div class="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center mb-2">
           <i data-lucide="list-checks" class="w-4 h-4 text-sky-600"></i>
         </div>
-        <div class="text-xs font-bold text-ads-text leading-snug">ネタ候補選定</div>
-        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">AIがスコア付きで提案</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">ネタ候補選定</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5 font-sans">AIがスコア付きで提案</div>
       </div>
       <!-- Step 3 -->
       <div class="bg-white border border-ads-border rounded-xl p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">3</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim font-sans">3</div>
         <div class="w-8 h-8 rounded-lg bg-indigo-100 flex items-center justify-center mb-2">
           <i data-lucide="file-text" class="w-4 h-4 text-indigo-600"></i>
         </div>
-        <div class="text-xs font-bold text-ads-text leading-snug">記事生成</div>
-        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">シーン＋タイトル案＋本文</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">記事生成</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5 font-sans">シーン＋タイトル案＋本文</div>
       </div>
       <!-- Step 4 -->
       <div class="bg-white border border-ads-border rounded-xl p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">4</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim font-sans">4</div>
         <div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center mb-2">
           <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
         </div>
-        <div class="text-xs font-bold text-ads-text leading-snug">確認・修正</div>
-        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">プライバシーチェック</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">確認・修正</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5 font-sans">プライバシーチェック</div>
       </div>
       <!-- Step 5 -->
       <div class="bg-white border border-ads-border rounded-xl p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">5</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim font-sans">5</div>
         <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center mb-2">
           <i data-lucide="layout-grid" class="w-4 h-4 text-amber-600"></i>
         </div>
-        <div class="text-xs font-bold text-ads-text leading-snug">アーカイブ</div>
-        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">サムネイル付き一覧</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">アーカイブ</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5 font-sans">サムネイル付き一覧</div>
       </div>
       <!-- Step 6 -->
       <div class="bg-white border border-ads-border rounded-xl p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">6</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim font-sans">6</div>
         <div class="w-8 h-8 rounded-lg bg-rose-100 flex items-center justify-center mb-2">
           <i data-lucide="send" class="w-4 h-4 text-rose-600"></i>
         </div>
-        <div class="text-xs font-bold text-ads-text leading-snug">note.comへ</div>
-        <div class="text-[10px] text-ads-muted leading-snug mt-0.5">半自動でコピー＋起動</div>
+        <div class="text-xs font-bold text-ads-text leading-snug font-sans">note.comへ</div>
+        <div class="text-[10px] text-ads-muted leading-snug mt-0.5 font-sans">半自動でコピー＋起動</div>
       </div>
     </div>
-    <p class="text-xs text-ads-dim mt-3 flex items-center gap-1.5">
+    <p class="text-xs text-ads-dim mt-3 flex items-center gap-1.5 font-sans">
       <i data-lucide="info" class="w-3 h-3 flex-shrink-0"></i>
       公開ボタンを押す最後の一手は、必ず本人の操作。ツールが用意するのはそこまで。
     </p>
@@ -204,11 +206,11 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
       <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
         <img src="thumbnail_kitchen_v3_mincho.jpg" alt="生成された記事のサムネイル例1" class="w-full h-auto block">
-        <div class="px-3 py-2 text-xs text-ads-muted">アーカイブに並ぶ記事サムネイルの一例</div>
+        <div class="px-3 py-2 text-xs text-ads-muted font-sans">アーカイブに並ぶ記事サムネイルの一例</div>
       </div>
       <div class="bg-ads-surface border border-ads-border rounded-xl overflow-hidden">
         <img src="thumbnail_test_recovery.jpg" alt="生成された記事のサムネイル例2" class="w-full h-auto block">
-        <div class="px-3 py-2 text-xs text-ads-muted">同じ工房から生まれた、別の記事の一例</div>
+        <div class="px-3 py-2 text-xs text-ads-muted font-sans">同じ工房から生まれた、別の記事の一例</div>
       </div>
     </div>
   </div>
@@ -217,7 +219,7 @@
   <div class="bg-ads-surface border border-dashed border-ads-border rounded-xl p-6 flex flex-col items-center justify-center text-center">
     <i data-lucide="video" class="w-6 h-6 text-ads-dim mb-2"></i>
     <div class="text-sm font-bold text-ads-muted">デモ動画 準備中</div>
-    <div class="text-xs text-ads-dim mt-1">実際に動かしている画面は、収録でき次第ここに追加します</div>
+    <div class="text-xs text-ads-dim mt-1 font-sans">実際に動かしている画面は、収録でき次第ここに追加します</div>
   </div>
 </section>
 
@@ -228,7 +230,7 @@
       <i data-lucide="alert-circle" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent">2</div>
+      <div class="text-xs font-bold text-ads-accent font-sans">2</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">解決する面倒・課題</h2>
     </div>
   </div>
@@ -274,7 +276,7 @@
       <i data-lucide="lightbulb" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent">3</div>
+      <div class="text-xs font-bold text-ads-accent font-sans">3</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">作りたいと思った理由</h2>
     </div>
   </div>
@@ -291,50 +293,50 @@
     <div class="hidden md:flex items-center gap-2 my-5">
       <div class="flex-1 bg-white border border-ads-border rounded-lg px-3 py-2.5 text-center">
         <i data-lucide="file-text" class="w-4 h-4 text-ads-muted mx-auto mb-1"></i>
-        <div class="text-xs text-ads-muted">4月の課題ツール</div>
-        <div class="text-[10px] text-ads-dim mt-0.5">家族向けレポート</div>
+        <div class="text-xs text-ads-muted font-sans">4月の課題ツール</div>
+        <div class="text-[10px] text-ads-dim mt-0.5 font-sans">家族向けレポート</div>
       </div>
       <i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim flex-shrink-0"></i>
       <div class="flex-1 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2.5 text-center">
         <i data-lucide="sparkles" class="w-4 h-4 text-blue-500 mx-auto mb-1"></i>
-        <div class="text-xs text-blue-800 font-medium">AIの"通訳"</div>
+        <div class="text-xs text-blue-800 font-medium font-sans">AIの"通訳"</div>
       </div>
       <i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim flex-shrink-0"></i>
       <div class="flex-1 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2.5 text-center">
         <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mx-auto mb-1"></i>
-        <div class="text-xs text-emerald-800 font-medium">頭が静かに</div>
+        <div class="text-xs text-emerald-800 font-medium font-sans">頭が静かに</div>
       </div>
       <i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim flex-shrink-0"></i>
       <div class="flex-1 bg-rose-50 border border-rose-200 rounded-lg px-3 py-2.5 text-center">
         <i data-lucide="send" class="w-4 h-4 text-rose-600 mx-auto mb-1"></i>
-        <div class="text-xs text-rose-800 font-medium">note発信にも</div>
-        <div class="text-[10px] text-rose-500 mt-0.5">開かれた場所へ</div>
+        <div class="text-xs text-rose-800 font-medium font-sans">note発信にも</div>
+        <div class="text-[10px] text-rose-500 mt-0.5 font-sans">開かれた場所へ</div>
       </div>
     </div>
 
     <!-- モバイル: 2×2グリッド -->
     <div class="grid grid-cols-2 gap-2 md:hidden my-5">
       <div class="bg-white border border-ads-border rounded-lg p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">1</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim font-sans">1</div>
         <i data-lucide="file-text" class="w-4 h-4 text-ads-muted mb-1"></i>
-        <div class="text-xs text-ads-muted font-medium">4月の課題ツール</div>
-        <div class="text-[10px] text-ads-dim mt-0.5">家族向けレポート</div>
+        <div class="text-xs text-ads-muted font-medium font-sans">4月の課題ツール</div>
+        <div class="text-[10px] text-ads-dim mt-0.5 font-sans">家族向けレポート</div>
       </div>
       <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-blue-300">2</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-blue-300 font-sans">2</div>
         <i data-lucide="sparkles" class="w-4 h-4 text-blue-500 mb-1"></i>
-        <div class="text-xs text-blue-800 font-medium">AIの"通訳"</div>
+        <div class="text-xs text-blue-800 font-medium font-sans">AIの"通訳"</div>
       </div>
       <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-emerald-300">3</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-emerald-300 font-sans">3</div>
         <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mb-1"></i>
-        <div class="text-xs text-emerald-800 font-medium">頭が静かに</div>
+        <div class="text-xs text-emerald-800 font-medium font-sans">頭が静かに</div>
       </div>
       <div class="bg-rose-50 border border-rose-200 rounded-lg p-3 relative">
-        <div class="absolute top-2 right-2.5 text-[10px] font-black text-rose-300">4</div>
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-rose-300 font-sans">4</div>
         <i data-lucide="send" class="w-4 h-4 text-rose-600 mb-1"></i>
-        <div class="text-xs text-rose-800 font-medium">note発信にも</div>
-        <div class="text-[10px] text-rose-500 mt-0.5">開かれた場所へ</div>
+        <div class="text-xs text-rose-800 font-medium font-sans">note発信にも</div>
+        <div class="text-[10px] text-rose-500 mt-0.5 font-sans">開かれた場所へ</div>
       </div>
     </div>
 
@@ -361,7 +363,7 @@
       <i data-lucide="wrench" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent">4</div>
+      <div class="text-xs font-bold text-ads-accent font-sans">4</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">工夫した点・苦戦した点</h2>
     </div>
   </div>
@@ -382,7 +384,7 @@
             </div>
             <span class="text-sm font-bold text-ads-text">模範解答（ゴールデンサンプル）方式</span>
           </div>
-          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第2回 Rule8</span>
+          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap font-sans">第2回 Rule8</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
           AIに文章を書かせるとき、指示を細かく重ねるより、「お手本になる記事」を1本まるごと見せる方が、ずっと精度が上がる。実際に高評価だった記事の冒頭を、生成のたびにAIへのお手本として渡す仕組みにした（コード上は<code class="text-[11px] bg-ads-surface border border-ads-border rounded px-1 py-0.5 text-ads-text">STYLE_REFERENCE</code>という名前で管理）。
@@ -397,7 +399,7 @@
             </div>
             <span class="text-sm font-bold text-ads-text">ヒューマンインザループの設計</span>
           </div>
-          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第12回</span>
+          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap font-sans">第12回</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
           AIが速くしてくれるのは、候補出し・下書き作りまで。<span class="font-medium text-ads-text">何を記事にするか・どのタイトルにするか・どのサムネイルにするか・note.comの公開ボタンを押すか</span>——判断と最後の一手は、すべて意図的に人間の手元に残した。ここが「AIの力だけど、わたしらしさが宿る場所」。
@@ -412,7 +414,7 @@
             </div>
             <span class="text-sm font-bold text-ads-text">自動チェックはするけど、最後は人の目で確認</span>
           </div>
-          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap">第3・8・12回</span>
+          <span class="text-[10px] font-bold text-ads-dim whitespace-nowrap font-sans">第3・8・12回</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
           プライバシーチェックは、AIへの"お願い"ではなく生成のたびに必ず動くプログラム処理。ただし「これなら公開して大丈夫」という最終判断まで自動でブロックするのは危険だと考え、<span class="font-medium text-ads-text">チェック結果を見せたうえで、最後に必ず自分の目で確認してから保存する</span>設計にした。
@@ -500,6 +502,18 @@
           AIが作業中にタスクリストを表示したり、選択肢を提示してきたりする場面で、最初は「これは何のため？」「自分は何をすればいい？」が分からず、都度聞きながら理解していく必要があった。AIと一緒に作る、ということ自体に慣れるための時間が、地味だけど確かに必要だった。
         </p>
       </div>
+
+      <div class="bg-white border border-ads-border rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="folder-sync" class="w-3.5 h-3.5 text-orange-600"></i>
+          </div>
+          <span class="text-sm font-bold text-ads-text">Cursorで使っていたスキルの、Claude Codeへの移し替え</span>
+        </div>
+        <p class="text-xs text-ads-muted leading-relaxed pl-9">
+          これまでCursorで使っていた図解作成・プレゼン作成などのスキルを、卒業制作を機にClaude Code中心の作業に一本化することにした。ただ、スキルが実際にどこに置かれているか、本当に有効化されているかを一つひとつ確認し、必要なものだけを移す作業は、地味だけど時間のかかる作業だった。
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -507,7 +521,7 @@
 <!-- CONTENT_END -->
   </main>
   <footer class="max-w-3xl mx-auto px-5 pb-10 pt-6 border-t border-ads-border/30">
-    <p class="text-xs text-ads-dim text-center">AI-Driven School の図解ツールで作成</p>
+    <p class="text-xs text-ads-dim text-center font-sans">AI-Driven School の図解ツールで作成</p>
   </footer>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>lucide.createIcons();</script>
