@@ -280,14 +280,16 @@
     <div class="flex items-start gap-3 mb-4">
       <i data-lucide="quote" class="w-5 h-5 text-ads-dim flex-shrink-0 mt-1"></i>
       <p class="text-sm text-ads-text leading-relaxed">
-        きっかけは、専門家のレポートをAIに"通訳"してもらった経験。読んだ瞬間、頭の中がすっと静かになった。
+        きっかけは、4月のスクール課題で作った別のツール「家族の毎日レポート」。単身赴任中の夫に子どもの様子を届けるため、専門的な視点を組み込んでAIに"通訳"してもらう仕組みだった。読んだ瞬間、頭の中がすっと静かになった。
       </p>
     </div>
 
-    <div class="flex items-center gap-2 my-5">
+    <!-- デスクトップ: 横並び＋矢印 -->
+    <div class="hidden md:flex items-center gap-2 my-5">
       <div class="flex-1 bg-white border border-ads-border rounded-lg px-3 py-2.5 text-center">
         <i data-lucide="file-text" class="w-4 h-4 text-ads-muted mx-auto mb-1"></i>
-        <div class="text-xs text-ads-muted">専門家のレポート</div>
+        <div class="text-xs text-ads-muted">4月の課題ツール</div>
+        <div class="text-[10px] text-ads-dim mt-0.5">家族向けレポート</div>
       </div>
       <i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim flex-shrink-0"></i>
       <div class="flex-1 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2.5 text-center">
@@ -299,10 +301,42 @@
         <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mx-auto mb-1"></i>
         <div class="text-xs text-emerald-800 font-medium">頭が静かに</div>
       </div>
+      <i data-lucide="arrow-right" class="w-4 h-4 text-ads-dim flex-shrink-0"></i>
+      <div class="flex-1 bg-rose-50 border border-rose-200 rounded-lg px-3 py-2.5 text-center">
+        <i data-lucide="send" class="w-4 h-4 text-rose-600 mx-auto mb-1"></i>
+        <div class="text-xs text-rose-800 font-medium">note発信にも</div>
+        <div class="text-[10px] text-rose-500 mt-0.5">開かれた場所へ</div>
+      </div>
+    </div>
+
+    <!-- モバイル: 2×2グリッド -->
+    <div class="grid grid-cols-2 gap-2 md:hidden my-5">
+      <div class="bg-white border border-ads-border rounded-lg p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-ads-dim">1</div>
+        <i data-lucide="file-text" class="w-4 h-4 text-ads-muted mb-1"></i>
+        <div class="text-xs text-ads-muted font-medium">4月の課題ツール</div>
+        <div class="text-[10px] text-ads-dim mt-0.5">家族向けレポート</div>
+      </div>
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-blue-300">2</div>
+        <i data-lucide="sparkles" class="w-4 h-4 text-blue-500 mb-1"></i>
+        <div class="text-xs text-blue-800 font-medium">AIの"通訳"</div>
+      </div>
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-emerald-300">3</div>
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 mb-1"></i>
+        <div class="text-xs text-emerald-800 font-medium">頭が静かに</div>
+      </div>
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-3 relative">
+        <div class="absolute top-2 right-2.5 text-[10px] font-black text-rose-300">4</div>
+        <i data-lucide="send" class="w-4 h-4 text-rose-600 mb-1"></i>
+        <div class="text-xs text-rose-800 font-medium">note発信にも</div>
+        <div class="text-[10px] text-rose-500 mt-0.5">開かれた場所へ</div>
+      </div>
     </div>
 
     <p class="text-sm text-ads-text leading-relaxed font-medium">
-      AIが情報整理と感情の言語化を助けてくれるなら、日々の出来事を記事に変える作業も、同じように支援できるはず。そう思ったのが着想でした。
+      このAIの"通訳"の力を、家族向けのレポートだけでなく、もっと開かれた場所（note）での発信にも生かせるはず。そう思ったのが「言葉の工房」の出発点でした。
     </p>
   </div>
 </section>
