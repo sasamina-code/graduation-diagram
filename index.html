@@ -232,12 +232,20 @@
     </div>
   </div>
 
-  <!-- デモ動画プレースホルダー -->
-  <div class="bg-ads-surface border border-dashed border-ads-border rounded-xl p-6 flex flex-col items-center justify-center text-center">
-    <i data-lucide="video" class="w-6 h-6 text-ads-dim mb-2"></i>
-    <div class="text-sm font-bold text-ads-muted">デモ動画 準備中</div>
-    <div class="text-xs text-ads-dim mt-1 font-sans">実際に動かしている画面は、収録でき次第ここに追加します</div>
+  <!-- デモ動画 -->
+  <div class="text-sm font-bold text-ads-text mb-3">実際に動かしている画面</div>
+  <div class="border border-ads-border rounded-xl overflow-hidden bg-black">
+    <video
+      controls
+      playsinline
+      preload="metadata"
+      poster="demo-video-poster.jpg"
+      class="w-full h-auto block"
+    >
+      <source src="demo-video.mp4" type="video/mp4">
+    </video>
   </div>
+  <div class="text-xs text-ads-dim mt-2 font-sans">入力からnoteへ渡すまでの通し操作（約2分・待ち時間は倍速、画面の記録と記事はAIが作った架空のサンプルです）</div>
 </section>
 
 <!-- 2. 解決する面倒・課題 -->
