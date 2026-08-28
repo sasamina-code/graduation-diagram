@@ -133,7 +133,6 @@
       <i data-lucide="hammer" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent font-sans">1</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">作ったもの</h2>
     </div>
   </div>
@@ -233,19 +232,36 @@
   </div>
 
   <!-- デモ動画 -->
-  <div class="text-sm font-bold text-ads-text mb-3">実際に動かしている画面</div>
-  <div class="border border-ads-border rounded-xl overflow-hidden bg-black">
-    <video
-      controls
-      playsinline
-      preload="metadata"
-      poster="demo-video-poster.jpg"
-      class="w-full h-auto block"
-    >
-      <source src="demo-video.mp4" type="video/mp4">
-    </video>
+  <div class="rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, #47597A, #313f56);">
+    <div class="px-6 pt-8 pb-5 text-center">
+      <h3 class="text-xl md:text-2xl font-bold text-white mb-2">実際に動いている「言葉の工房」</h3>
+      <p class="text-xs md:text-sm text-white/70 font-sans leading-relaxed">
+        入力からnoteへ渡すまでの通し操作（約2分・待ち時間は倍速、画面の記録と記事はAIが作った架空のサンプルです）
+      </p>
+    </div>
+    <div class="flex justify-center mb-4">
+      <button id="demo-video-fullscreen-btn" type="button" class="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white text-xs font-bold font-sans rounded-full px-4 py-2 transition">
+        <i data-lucide="maximize" class="w-3.5 h-3.5"></i>
+        全画面で見ると、操作の流れがよく分かります
+      </button>
+    </div>
+    <div class="px-4 pb-6 md:px-8 md:pb-8">
+      <div class="border-4 border-white/15 rounded-xl overflow-hidden bg-black shadow-xl">
+        <video id="demo-video" controls playsinline preload="metadata" poster="demo-video-poster.jpg" class="w-full h-auto block">
+          <source src="demo-video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
   </div>
-  <div class="text-xs text-ads-dim mt-2 font-sans">入力からnoteへ渡すまでの通し操作（約2分・待ち時間は倍速、画面の記録と記事はAIが作った架空のサンプルです）</div>
+
+  <script>
+    document.getElementById('demo-video-fullscreen-btn')?.addEventListener('click', () => {
+      const v = document.getElementById('demo-video');
+      if (!v) return;
+      if (v.requestFullscreen) v.requestFullscreen();
+      else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen(); // iOS Safari
+    });
+  </script>
 </section>
 
 <!-- 2. 解決する面倒・課題 -->
@@ -255,7 +271,6 @@
       <i data-lucide="alert-circle" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent font-sans">2</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">解決する面倒・課題</h2>
     </div>
   </div>
@@ -301,7 +316,6 @@
       <i data-lucide="lightbulb" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent font-sans">3</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">作りたいと思った理由</h2>
     </div>
   </div>
@@ -385,7 +399,6 @@
       <i data-lucide="wrench" class="w-4.5 h-4.5 text-white"></i>
     </div>
     <div>
-      <div class="text-xs font-bold text-ads-accent font-sans">4</div>
       <h2 class="text-xl font-bold text-ads-text leading-tight">工夫した点・苦戦した点</h2>
     </div>
   </div>
@@ -448,10 +461,10 @@
           <div class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
             <i data-lucide="edit-3" class="w-3.5 h-3.5 text-amber-600"></i>
           </div>
-          <span class="text-sm font-bold text-ads-text">AUTHOR_NOTEパターン</span>
+          <span class="text-sm font-bold text-ads-text">自動の感情ラベルより、本人の言葉を優先する仕組み</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
-          日々のジャーナルは、自動整理ツールを通すと、実際の気持ちとズレた感情ラベルが付くことがある（例：本人の実感は「心を無にして嵐が過ぎるのを待つ」だったのに、自動ラベルは「恐怖に近い緊張感」となっていた）。AIの自動解釈をそのまま信じると、記事の感情の芯がズレてしまう。そこで、本人が「今回はこう感じた」と書き添えるメモ（AUTHOR_NOTE）を、自動ラベルより必ず優先して読み込む仕組みをプロンプトに組み込んだ。実行のたびに書き換えて使う、いわば"本人の解釈権"を確保するための工夫。
+          日々のジャーナルは、自動整理ツールを通すと、実際の気持ちとズレた感情ラベルが付くことがある（例：本人の実感は「心を無にして嵐が過ぎるのを待つ」だったのに、自動ラベルは「恐怖に近い緊張感」となっていた）。AIの自動解釈をそのまま信じると、記事の感情の芯がズレてしまう。そこで、本人が「今回はこう感じた」と書き添えるメモを、自動ラベルより必ず優先して読み込む仕組みをプロンプトに組み込んだ（コード上は<code class="text-[11px] bg-ads-surface border border-ads-border rounded px-1 py-0.5 text-ads-text">AUTHOR_NOTE</code>という名前で管理）。実行のたびに書き換えて使う、いわば"本人の解釈権"を確保するための工夫。
         </p>
       </div>
 
