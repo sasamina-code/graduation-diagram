@@ -416,8 +416,8 @@
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center justify-between gap-2 mb-2">
           <div class="flex items-center gap-2">
-            <div class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
-              <i data-lucide="star" class="w-3.5 h-3.5 text-blue-600"></i>
+            <div class="w-7 h-7 rounded-lg bg-ads-accent/10 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="star" class="w-3.5 h-3.5 text-ads-accent"></i>
             </div>
             <span class="text-sm font-bold text-ads-text">模範解答（ゴールデンサンプル）方式</span>
           </div>
@@ -431,8 +431,8 @@
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center justify-between gap-2 mb-2">
           <div class="flex items-center gap-2">
-            <div class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center flex-shrink-0">
-              <i data-lucide="user-check" class="w-3.5 h-3.5 text-purple-600"></i>
+            <div class="w-7 h-7 rounded-lg bg-ads-warning/10 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="user-check" class="w-3.5 h-3.5 text-ads-warning"></i>
             </div>
             <span class="text-sm font-bold text-ads-text">ヒューマンインザループの設計</span>
           </div>
@@ -446,8 +446,8 @@
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center justify-between gap-2 mb-2">
           <div class="flex items-center gap-2">
-            <div class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center flex-shrink-0">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+            <div class="w-7 h-7 rounded-lg bg-ads-accent/10 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-ads-accent"></i>
             </div>
             <span class="text-sm font-bold text-ads-text">自動チェックはするけど、最後は人の目で確認</span>
           </div>
@@ -460,20 +460,20 @@
 
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="edit-3" class="w-3.5 h-3.5 text-amber-600"></i>
+          <div class="w-7 h-7 rounded-lg bg-ads-warning/10 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="edit-3" class="w-3.5 h-3.5 text-ads-warning"></i>
           </div>
           <span class="text-sm font-bold text-ads-text">自動の感情ラベルより、本人の言葉を優先する仕組み</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
-          日々のジャーナルは、自動整理ツールを通すと、実際の気持ちとズレた感情ラベルが付くことがある（例：本人の実感は「心を無にして嵐が過ぎるのを待つ」だったのに、自動ラベルは「恐怖に近い緊張感」となっていた）。AIの自動解釈をそのまま信じると、記事の感情の芯がズレてしまう。そこで、本人が「今回はこう感じた」と書き添えるメモを、自動ラベルより必ず優先して読み込む仕組みをプロンプトに組み込んだ（コード上は<code class="text-[11px] bg-ads-surface border border-ads-border rounded px-1 py-0.5 text-ads-text">AUTHOR_NOTE</code>という名前で管理）。実行のたびに書き換えて使う、いわば"本人の解釈権"を確保するための工夫。
+          日々のジャーナルは、自動整理ツールを通すと、実際の気持ちとズレた感情ラベルが付くことがある（例：本人の実感は「心を無にして嵐が過ぎるのを待つ」だったのに、自動ラベルは「恐怖に近い緊張感」となっていた）。AIの自動解釈をそのまま信じると、記事の感情の芯がズレてしまう。そこで、AIの自動判定が実感とズレていたときに、必ず本人の言い分を優先させる「訂正メモ」を、生成のたびに参照する仕組みをプロンプトに組み込んだ（コード上は<code class="text-[11px] bg-ads-surface border border-ads-border rounded px-1 py-0.5 text-ads-text">AUTHOR_NOTE</code>という名前で管理）。今は2つのズレの実例（感情表現・強い言葉の扱い）を記録済みで、新しいズレに気づくたびにこのメモを書き足して育てていく想定。
         </p>
       </div>
 
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-rose-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="drama" class="w-3.5 h-3.5 text-rose-600"></i>
+          <div class="w-7 h-7 rounded-lg bg-ads-accent/10 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="drama" class="w-3.5 h-3.5 text-ads-accent"></i>
           </div>
           <span class="text-sm font-bold text-ads-text">「会話の再構成」5ルール</span>
         </div>
@@ -484,13 +484,13 @@
 
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-indigo-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="layers" class="w-3.5 h-3.5 text-indigo-600"></i>
+          <div class="w-7 h-7 rounded-lg bg-ads-warning/10 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-ads-warning"></i>
           </div>
           <span class="text-sm font-bold text-ads-text">記事の「型」を2種類</span>
         </div>
         <p class="text-xs text-ads-muted leading-relaxed pl-9">
-          「出来事→気づき→感謝」という同じ骨格を毎回繰り返すと、記事を重ねるほど読者に構造が見え透いて飽きられてしまう。そこで記事に2つの「型」を用意した。型A（旗艦記事）は1つの出来事を通して大きな変容を描き切る、重めで低頻度の記事。型B（つれづれ）は日々の小さな出来事をそのまま書き留め、結論めいた一文を置かずに情景や台詞で「ふわっと」終える、軽めで高頻度の記事。量産しても単調にならないよう、素材選定の段階でどちらの型に向くかも判定するようにしている。
+          「出来事→気づき→前向きな着地」という同じ骨格を毎回繰り返すと、記事を重ねるほど読者に構造が見え透いて飽きられてしまう。そこで記事に2つの「型」を用意した。型A（旗艦記事）は1つの出来事を通して大きな変容を描き切る、重めで低頻度の記事。型B（つれづれ）は日々の小さな出来事をそのまま書き留め、結論めいた一文を置かずに情景や台詞で「ふわっと」終える、軽めで高頻度の記事。量産しても単調にならないよう、素材選定の段階でどちらの型に向くかも判定するようにしている。
         </p>
       </div>
     </div>
@@ -499,15 +499,15 @@
   <!-- 苦戦した点 -->
   <div>
     <div class="flex items-center gap-2 mb-4">
-      <i data-lucide="bug" class="w-4 h-4 text-ads-warning"></i>
+      <i data-lucide="compass" class="w-4 h-4 text-ads-warning"></i>
       <span class="text-sm font-bold text-ads-text">苦戦した点 — 技術より、AIとの向き合い方だった</span>
     </div>
 
     <div class="space-y-3">
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-sky-600"></i>
+          <div class="w-7 h-7 rounded-lg bg-ads-accent/10 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-ads-accent"></i>
           </div>
           <span class="text-sm font-bold text-ads-text">標準モデルか、上位モデルか</span>
         </div>
@@ -518,8 +518,8 @@
 
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-violet-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="git-branch" class="w-3.5 h-3.5 text-violet-600"></i>
+          <div class="w-7 h-7 rounded-lg bg-ads-warning/10 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="git-branch" class="w-3.5 h-3.5 text-ads-warning"></i>
           </div>
           <span class="text-sm font-bold text-ads-text">Claude CodeとCowork、どちらで進めるか</span>
         </div>
@@ -530,8 +530,8 @@
 
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-teal-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="help-circle" class="w-3.5 h-3.5 text-teal-600"></i>
+          <div class="w-7 h-7 rounded-lg bg-ads-accent/10 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="help-circle" class="w-3.5 h-3.5 text-ads-accent"></i>
           </div>
           <span class="text-sm font-bold text-ads-text">AIエージェントの動き、理解するまでの時間</span>
         </div>
@@ -542,8 +542,8 @@
 
       <div class="bg-white border border-ads-border rounded-xl p-4">
         <div class="flex items-center gap-2 mb-2">
-          <div class="w-7 h-7 rounded-lg bg-orange-100 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="folder-sync" class="w-3.5 h-3.5 text-orange-600"></i>
+          <div class="w-7 h-7 rounded-lg bg-ads-warning/10 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="folder-sync" class="w-3.5 h-3.5 text-ads-warning"></i>
           </div>
           <span class="text-sm font-bold text-ads-text">Cursorで使っていたスキルの、Claude Codeへの移し替え</span>
         </div>
